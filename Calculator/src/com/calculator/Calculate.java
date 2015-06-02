@@ -73,7 +73,7 @@ public class Calculate extends HttpServlet {
 				}
 				// Forming String with the original request + result operation
 				String endResult = calc.getOriginal() + " = " + strTrac;
-
+				
 				MySql sql = new MySql();
 				// Saving the finished result
 				sql.insertHistoryCalculate(userID, endResult);

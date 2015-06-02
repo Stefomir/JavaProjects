@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%
 	HttpSession mySession = request.getSession(true);
@@ -29,7 +29,7 @@
 
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="/Calculator/Mycss.css" />
 <script type="text/javascript" language="Javascript">
 	function c(val) {
@@ -40,6 +40,9 @@
 	}
 	function e() {
 		document.myform.submit();
+	}
+	function b() {
+		document.getElementById("d").value = document.getElementById("d").value.slice(0,-1);
 	}
 </script>
 
@@ -79,6 +82,7 @@
 					<input type="button" class="button gray" value="(" onclick='v("(")'>
 					<input type="button" class="button gray" value=")" onclick='v(")")'>
 					<input type="button" class="button pink" value="/" onclick='v("/")'>
+					<input type="button" class="button gray" value="<=" onclick='b("")'>
 				</p>
 				<p>
 					<input type="button" class="button black" value="7"
